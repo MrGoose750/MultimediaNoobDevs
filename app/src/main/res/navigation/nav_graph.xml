@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menu">
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.multimedia.menu"
+        android:label="Menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_video"
+            app:destination="@id/video" />
+        <action
+            android:id="@+id/action_menu_to_audio"
+            app:destination="@id/audio" />
+        <action
+            android:id="@+id/action_menu_to_foto"
+            app:destination="@id/foto" />
+    </fragment>
+    <fragment
+        android:id="@+id/video"
+        android:name="com.example.multimedia.video"
+        android:label="Video"
+        tools:layout="@layout/fragment_video" >
+        <action
+            android:id="@+id/action_video_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/audio"
+        android:name="com.example.multimedia.audio"
+        android:label="Audio"
+        tools:layout="@layout/fragment_audio" >
+        <action
+            android:id="@+id/action_audio_to_menu2"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/foto"
+        android:name="com.example.multimedia.foto"
+        android:label="Foto"
+        tools:layout="@layout/fragment_foto" >
+        <action
+            android:id="@+id/action_foto_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+</navigation>
